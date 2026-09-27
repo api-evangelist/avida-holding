@@ -1,0 +1,16 @@
+generated: '2026-09-27'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: avida.ae
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec  2 20:03:44 2026 GMT
+  hsts: false
+domains:
+- domain: avida.ae
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

@@ -1,23 +1,64 @@
 aid: avida-holding
+
 name: Avida Holding
-description: 'Avida Holding is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://avida-ae-350686.hostingersite.com/wp-content/uploads/2025/09/Website-images-1-1024x724.png
+
+description: 'Avida Holding AB operates as a holding company providing financial services including corporate and consumer lending solutions across Sweden, Norway, and Finland. Through its subsidiaries it offers mortgage loans, invoice factoring, and other credit products, aiming to enable customers to access easy financing and improve financial wellbeing. The company is backed by investors such as KKR and focuses on growth through customer‑centric, solution‑oriented culture.'
+
 url: https://raw.githubusercontent.com/api-evangelist/avida-holding/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Finance
+- Lending
+- Sweden
+- Norway
+- Finland
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/avida-holding-hosts.yml
+- type: DomainSecurity
+  url: security/avida-holding-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://avida.ae
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-27'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://www.nasdaqprivatemarket.com/
+    status: 200
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
